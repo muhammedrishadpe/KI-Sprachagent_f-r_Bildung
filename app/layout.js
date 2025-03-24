@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       ><StackProvider app={stackServerApp}><StackTheme>
+        <Provider></Provider>
         {children}
       </StackTheme></StackProvider></body>
     </html>
