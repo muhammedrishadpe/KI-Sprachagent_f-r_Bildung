@@ -1,4 +1,4 @@
-export const ExpertsList =  [
+export const CoachingOptions =  [
     {
     name:'Vorlesung über Thema',
     icone:'/lecture.jpg',

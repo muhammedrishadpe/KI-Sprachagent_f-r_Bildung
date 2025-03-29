@@ -2,9 +2,10 @@
 import React from "react";
 import { useUser } from "@stackframe/stack";
 import { Button } from "@/components/ui/button";
-import { ExpertsList } from "@/services/Options";
+import { CoachingOptions } from "@/services/Options";
 import Image from 'next/image';
 import {BlurFade} from "@/components/magicui/blur-fade";
+import {UserInputDialog} from "./UserInputDialog";
 function FeatureAssistants() {
   const user = useUser(); 
   return (
@@ -20,14 +21,18 @@ function FeatureAssistants() {
       </div>
 
       <div className='grid grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-10 mt-10'>
-        {ExpertsList.map((option, index) => (
+        {CoachingOptions.map((option, index) => (
            <BlurFade key={option.icone} delay={0.25 + index * 0.05} inView>
-          <div className="p-3 bg-secondary rounded-3xl flex-col justify-center items-center" key={index} >
+             <div className="p-3 bg-secondary rounded-3xl flex-col justify-center items-center" >
+            <UserInputDialog CoachingOptions={option.name}>
+          <div className="flex flex-col justify-center items-center" key={index} >
            <Image src={option.icone} alt={option.name} 
            width={160} height={160} 
            className='h-[80px] w-[80px] hover:rotate-12 cursor-pointer transition-all'
            />
            <p className="mt-2">{option.name}</p>
+          </div>
+          </UserInputDialog>
           </div>
           </BlurFade>
         ))}

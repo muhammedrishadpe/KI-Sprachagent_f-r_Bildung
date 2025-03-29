@@ -9,16 +9,17 @@ import {
   } from "@/components/ui/dialog"
   
 
-function UserInputDialog() {
+function UserInputDialog({children, coachingOptions}) {
   return (
     <Dialog>
-    <DialogTrigger>Open</DialogTrigger>
+    <DialogTrigger>{children}</DialogTrigger>
     <DialogContent>
       <DialogHeader>
-        <DialogTitle>Are you absolutely sure?</DialogTitle>
+        <DialogTitle>{coachingOption.name}</DialogTitle>
         <DialogDescription>
-          This action cannot be undone. This will permanently delete your account
-          and remove your data from our servers.
+         <div>
+            <h1>Gib ein Thema ein, um deine Fähigkeiten zu meistern {coachingOption.name}</h1>
+         </div>
         </DialogDescription>
       </DialogHeader>
     </DialogContent>
