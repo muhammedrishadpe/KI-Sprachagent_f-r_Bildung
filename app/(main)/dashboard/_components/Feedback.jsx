@@ -5,7 +5,7 @@ function Feedback() {
     <div>
     <h2 className='font-bold text-xl'>Feedback</h2>
 
-    <h2 className='text-gray-400'>You don't have any previous Interview feedback</h2>
+    <h2 className='text-gray-400'>Sie haben kein vorheriges Interview-Feedback</h2>
     </div>
   )
 }

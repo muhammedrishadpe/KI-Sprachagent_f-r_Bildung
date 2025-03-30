@@ -9,15 +9,15 @@ import {
   } from "@/components/ui/dialog"
   
 
-function UserInputDialog({children, coachingOptions}) {
+function UserInputDialog({children, coachingOption}) {
   return (
     <Dialog>
     <DialogTrigger>{children}</DialogTrigger>
     <DialogContent>
       <DialogHeader>
         <DialogTitle>{coachingOption.name}</DialogTitle>
-        <DialogDescription>
-         <div>
+        <DialogDescription asChild>
+         <div className='mt-3'>
             <h1>Gib ein Thema ein, um deine Fähigkeiten zu meistern {coachingOption.name}</h1>
          </div>
         </DialogDescription>

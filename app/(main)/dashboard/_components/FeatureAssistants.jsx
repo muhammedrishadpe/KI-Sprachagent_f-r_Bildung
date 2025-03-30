@@ -2,10 +2,10 @@
 import React from "react";
 import { useUser } from "@stackframe/stack";
 import { Button } from "@/components/ui/button";
-import { CoachingOptions } from "@/services/Options";
+import { CoachingOptions } from "../../../../services/Options";
 import Image from 'next/image';
 import {BlurFade} from "@/components/magicui/blur-fade";
-import {UserInputDialog} from "./UserInputDialog";
+import UserInputDialog from "./UserInputDialog";
 function FeatureAssistants() {
   const user = useUser(); 
   return (
@@ -24,7 +24,7 @@ function FeatureAssistants() {
         {CoachingOptions.map((option, index) => (
            <BlurFade key={option.icone} delay={0.25 + index * 0.05} inView>
              <div className="p-3 bg-secondary rounded-3xl flex-col justify-center items-center" >
-            <UserInputDialog CoachingOptions={option.name}>
+            <UserInputDialog coachingOption={option}>
           <div className="flex flex-col justify-center items-center" key={index} >
            <Image src={option.icone} alt={option.name} 
            width={160} height={160} 
