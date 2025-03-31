@@ -19,6 +19,7 @@ function UserInputDialog({children, coachingOption}) {
         <DialogDescription asChild>
          <div className='mt-3'>
             <h1>Gib ein Thema ein, um deine Fähigkeiten zu meistern {coachingOption.name}</h1>
+            <Textarea placeholder="Enter your topic here..." />
          </div>
         </DialogDescription>
       </DialogHeader>
