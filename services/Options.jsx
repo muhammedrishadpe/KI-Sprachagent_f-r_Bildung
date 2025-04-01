@@ -20,3 +20,18 @@ export const CoachingOptions =  [
     icone:'/monk.png',
 },
 ]
+
+export const CoachingExpert = [
+    {
+        name:'Joanna',
+        avatar:'/t1.jpg'
+    },
+    {
+        name:'Elina',
+        avatar:'/t2.jpg'
+    },
+    {
+        name:'Lenert',
+        avatar:'/t3.jpg'
+    },
+]
