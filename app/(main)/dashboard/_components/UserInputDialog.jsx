@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -8,7 +8,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { CoachingExpert } from "@/services/Options";
+import { Textarea } from "@/components/ui/textarea";
 import { useStackApp } from "@stackframe/stack";
+import Image from "next/image";
+
+
+
 
 function UserInputDialog({ children, coachingOption }) {
 const [selectExpert, setSelectExpert] = useState();
